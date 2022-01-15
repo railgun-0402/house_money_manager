@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Top画面
 Route::get('/', function () {
-    return view('welcome');
+    return view('top');  
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/useFunc/useInfo', 'useController@useInfo'); // 使用金入力画面
+
+//Route::get('/', 'HomeController@index')->name('welcome'); // メイン画面
